@@ -149,8 +149,7 @@ public class loops {
 */
 
 //12.🌟	Sum of even numbers between 1 and N
-/*
-import java.util.Scanner;
+/*import java.util.Scanner;
 public class loops {
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);
@@ -159,7 +158,7 @@ public class loops {
         int sum=0;
         for(int a=1;a<=n;a++){
             if(a%2==0){
-                System.out.println(a);
+
                 sum=sum+a;
         }
     }
@@ -233,7 +232,7 @@ public class loops {
         int count=0;
         for(int a=1;a<=n;a++){
         if(a%2==0){
-            System.out.println(a);
+
             count++;
         }
         }
@@ -253,7 +252,7 @@ public class loops {
         int count=0;
         for(int a=1;a<=n;a++){
             if(a%2!=0){
-                System.out.println(a);
+
                 count++;
 
             }
@@ -490,25 +489,402 @@ public class loops {
 
 //27.🌟Print Armstrong numbers between 1 and 1000
 
+/*
 public class loops {
     public static void main(String[]args){
        for(int n=1;n<=1000;n++){
 
+
+
+           int original =n;
+           int temp=n;
            int count=0;
-           int sum=0;
-           while (n>0){
+
+           while (temp>0){
                count++;
-
-               int digit=n%10;
-               int power=(int)Math.pow(digit,count);
-               sum=sum+power;
-               n=n/10;
-               System.out.printl;
-
-
+               temp=temp/10;
            }
-       }
+           int sum=0;
+           temp=n;
 
+           while (temp>0){
+               int digit=temp%10;
+                sum=sum+(int)Math.pow(digit,count);
+               temp=temp/10;
+           }
+  if (sum==original){
+      System.out.println(original);
+  }
+
+    }
+}}
+*/
+
+//28.🌟Check prime number
+/*
+import java.util.Scanner;
+public class loops {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter any number = ");
+        int n=sc.nextInt();
+        Boolean isprime=true;
+
+        if(n<=1){
+            System.out.println("not a prime number");
+             isprime=false;
+
+        }else{
+
+            for(int a=2;a<=n/2;a++){
+                if(n%a==0){
+                    isprime=false;
+                    break;
+
+                }
+            }
+        }if(isprime){
+            System.out.println(" it is a prime number");
+        }else {
+            System.out.println(" it is not a prime number");
+        }sc.close();
+    }
+}
+*/
+
+//29.🌟Print prime numbers between 1 and N
+ /*import java.util.Scanner;
+public class loops {
+public  static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter any number");
+    int N=sc.nextInt();
+
+
+ for ( int n=2;n<=N;n++){
+                boolean isprime=true;
+
+                for(int a=2;a<=n/2;a++){
+                    if(n%a==0){
+                        isprime=false;
+                    break;
+                }}
+                if (isprime) {
+        System.out.print(n + " ");
+        }
+        }
+
+    }
+    }
+*/
+
+//30.🌟Count prime digits in a number
+
+/*
+import java.util.Scanner;
+public class loops {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter any number = ");
+        int n=sc.nextInt();
+        n=Math.abs(n);
+        int count=0;
+
+        if(n==0){
+            System.out.println(0);
+        }else{
+
+        while(n>0){
+            int digit=n%10;
+            if(digit==2||digit==3||digit==7||digit==5){
+                count++;
+            }n=n/10;
+        } System.out.println(count);
+
+    }sc.close();
+}}*/
+
+
+/*
+import java.util.Scanner;
+
+//🌟Sum of prime digits in a number
+public class loops {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter any number = ");
+        int n=sc.nextInt();
+        n=Math.abs(n);
+        int sum=0;
+
+        if(n==0){
+            System.out.println(0);
+        }else{
+            while(n>0){
+                int digit=n%10;
+                if(digit==2||digit==3||digit==5||digit==7){
+                    sum=sum+digit;
+
+                }n=n/10;
+            }
+            System.out.println(sum);
+    }sc.close();
+}}*/
+
+
+//🌟Fibonacci series till N terms
+
+/*
+import java.util.Scanner ;
+public class loops {
+    public static void main(String[]args){
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter any number = ");
+        int n=sc.nextInt();
+
+        int a=0;
+        int b=1;
+
+        for(int i=1;i<=n;i++){
+
+            System.out.print(a + " ");
+
+            int next=a+b;
+            a=b;
+            b=next;
+
+        }
+        }
+    }
+*/
+
+
+//2.🌟•  GCD of two numbers (using loop)
+ /*import java.util.Scanner;
+ public class loops {
+     public static void main(String[]args){
+         Scanner sc=new Scanner(System.in);
+         System.out.println("enter first number  = ");
+         int a=sc.nextInt();
+
+         System.out.println("enter second number = ");
+         int b=sc.nextInt();
+
+         a=Math.abs(a);
+         b=Math.abs(b);
+
+
+         int gcd=1;
+         int min=(a<b)?a:b;
+
+         for(int n=1;n<=min;n++){
+             if(a%n==0&&b%n==0){
+                 gcd=n;
+             }
+         }
+         System.out.println(gcd);
+         sc.close();
+     }
+}*/
+
+//3.🌟•  LCM of two numbers (using loop)
+
+/*
+import java.util.Scanner;
+public class loops {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter first number  = ");
+        int a=sc.nextInt();
+
+        System.out.println("enter second number = ");
+        int b=sc.nextInt();
+
+        a=Math.abs(a);
+        b=Math.abs(b);
+
+
+        int lcm=0;
+        int max=(a>b)?a:b;
+
+        for(int n=max; ;n+=max){
+            if(n%a==0&&n%b==0){
+                lcm=n;
+                break;
+            }
+        }
+        System.out.println(lcm);
+        sc.close();
+    }
+}
+
+*/
+
+//🌟Perfect Number 👉 factors sum logic (6 = 1+2+3)
+/*
+import java.util.Scanner;
+public class loops {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter any number = ");
+        int n=sc.nextInt();
+
+        int sum=0;
+
+
+        for(int a=1;a<=n/2;a++) {
+            if (n % a == 0) {
+                sum = sum + a;
+
+            }
+
+        }
+
+        if(sum==n&&n!=0){
+            System.out.println("perfect number");
+        }else{
+            System.out.println("not perfect number ");
+        }sc.close();
+    }
+}
+
+*/
+
+//🌟Strong Number (145) 👉 factorial + digit loop combo
+
+/*
+import java.util.Scanner;
+public class loops {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter anu number = ");
+        int n=sc.nextInt();
+        n=Math.abs(n);
+
+        int original=n;
+        int sum=0;
+
+        while(n>0){
+            int digit=n%10;
+
+            int fact=1;
+            for(int a=1;a<=digit;a++){
+                fact=fact*a;
+            }sum=sum+fact;
+            n=n/10;
+
+        }if(sum==original){
+            System.out.println("strong number ");
+        }else {
+            System.out.println("not a strong number");
+        }sc.close();
+
+    }
+}
+*/
+
+
+//Harshad (Niven) Number 👉 number divisible by sum of digits
+
+/*
+import java.util.Scanner;
+public class loops {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter any number = ");
+        int n=sc.nextInt();
+        n=Math.abs(n);
+
+        int original=n;
+        int sum=0;
+
+        while(n>0){
+            int digit=n%10;
+            sum=sum+digit;
+            n=n/10;
+
+        }
+        System.out.println(sum);
+        if(sum!=0&&original%sum==0){
+            System.out.println("it is harshad number");
+        }else {
+            System.out.println("it is not harshad numbar");
+        }sc.close();
+
+        }
+    }
+*/
+
+
+//🌟 Count trailing zeros in factorial 👉 logic thinking (count of 5s)
+
+/*
+import java.util.Scanner;
+public class loops {
+    public static void  main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter any number = ");
+        int n=sc.nextInt();
+        n=Math.abs(n);
+        int count=0;
+
+
+        for(int a=5;n/a>0; a=a*5){
+            count=count+(n/a);
+
+        }
+        System.out.println( "trailing zeros"+ count);
+sc.close();
+    }
+}
+
+*/
+
+
+// 🌟Largest digit in a number
+
+/*import java.util.Scanner;
+
+public class loops {
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter any number = ");
+        int n=sc.nextInt();
+        n=Math.abs(n);
+        int maxdigit=0;
+
+        while (n>0){
+            int digit=n%10;
+            if(maxdigit<digit){
+                maxdigit=digit;
+            }n=n/10;
+
+        }
+        System.out.println(maxdigit);
+        sc.close();
+    }
+}*/
+
+//🌟Smallest digit in a number 👍 Medium Priority
+
+import java.util.Scanner;
+public class loops {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter any number = ");
+        int n=sc.nextInt();
+        n=Math.abs(n);
+
+        int mimdigit=9;
+
+        while(n>0){
+            int digit=n%10;
+            if(mimdigit>digit){
+                mimdigit=digit;
+            }n=n/10;
+        }
+        System.out.println(mimdigit);
+        sc.close();
     }
 }
 
